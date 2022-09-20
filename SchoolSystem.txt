@@ -1,0 +1,75 @@
+package manage;
+
+public abstract class SchoolSystem implements ISignUp{
+public Integer big;
+public Integer medium;
+public Integer small;
+SchoolSystem(){}
+SchoolSystem(Integer big,Integer medium,Integer small){
+	this.big=big;
+	this.medium=medium;
+	this.small=small;
+}
+public void setSchoolSystemInfo(Integer big,Integer medium,Integer small) {
+	this.big=big;
+	this.medium=medium;
+	this.small=small;
+}
+public Integer getBig() {
+	return big;
+}
+public Integer getMedium() {
+	return medium;
+}
+public Integer getSmall() {
+	return small;
+}
+public void print() { //这里写什么
+	
+}
+public boolean addStudent(Integer stuType) { //这里好像不太对，这里应该用来判断剩余人数
+	if(stuType==1) {
+		this.big=this.big-1;
+		if(getBig()<0) {
+			this.big=this.big+1;
+			return false;
+		}
+		else return true;
+	}
+
+		
+	if(stuType==2) {
+		this.medium=this.medium-1;
+		if(getMedium()<0) {
+			this.medium=this.medium+1;
+			return false;
+		}
+		else return true;
+	}
+		
+	if(stuType==3) {
+		this.small=this.small-1;
+		if(getSmall()<0) {
+			this.small=this.small+1;
+			return false;
+		}
+	else return true;}
+	return false;
+}
+
+public static IParams parse(String input)throws Exception{
+	String regex="\\D+";
+    String word[]=input.split(regex);
+	System.out.println(word[0]);
+	System.out.println(word[1]);
+	System.out.println(word[2]);
+	System.out.println(word[3]);
+	System.out.println(word[4]);
+	System.out.println(word[5]);
+	System.out.println(word[6]);
+	big=Integer.parseInt(word[4]);
+	medium=Integer.parseInt(word[5]);
+	small=Integer.parseInt(word[6]);
+	return null;
+
+}
