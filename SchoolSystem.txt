@@ -71,5 +71,5 @@ public static IParams parse(String input)throws Exception{
 	medium=Integer.parseInt(word[5]);
 	small=Integer.parseInt(word[6]);
 	return null;
-
 }
+i like git.
