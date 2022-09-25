@@ -1,11 +1,11 @@
 package manage;
 
 public abstract class SchoolSystem implements ISignUp{
-public Integer big;//大班的人数
-public Integer medium;//中班的人数
-public Integer small;//小班的人数
-SchoolSystem(){} //SchoolSystem的无参构造方法
-SchoolSystem(Integer big,Integer medium,Integer small){ //SchoolSystem的有参构造方法
+public Integer big;
+public Integer medium;
+public Integer small;
+SchoolSystem(){}
+SchoolSystem(Integer big,Integer medium,Integer small){
 	this.big=big;
 	this.medium=medium;
 	this.small=small;
