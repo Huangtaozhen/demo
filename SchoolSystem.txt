@@ -1,8 +1,8 @@
 package manage;
 
 public abstract class SchoolSystem implements ISignUp{
-public Integer big;
-public Integer medium;
+public Integer big; 
+public Integer medium; 
 public Integer small;
 SchoolSystem(){}
 SchoolSystem(Integer big,Integer medium,Integer small){
@@ -27,7 +27,7 @@ public Integer getSmall() {
 public void print() { //这里写什么
 	
 }
-public boolean addStudent(Integer stuType) { //这里好像不太对，这里应该用来判断剩余人数
+public boolean addStudent(Integer stuType) {  //这里有可能是对的，不太清楚逻辑
 	if(stuType==1) {
 		this.big=this.big-1;
 		if(getBig()<0) {
